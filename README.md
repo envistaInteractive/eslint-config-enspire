@@ -1,5 +1,7 @@
 [![Npm Version][npm-badge]][npm-url]
+
 [![Dependencies][david-badge]][david-url]
+
 [![Dev dependencies][david-dev-badge]][david-url]
 
 [![npm package](https://nodei.co/npm/eslint-config-enspire.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/eslint-config-enspire/)
