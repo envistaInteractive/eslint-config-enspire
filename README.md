@@ -1,8 +1,7 @@
-[![Npm Version][npm-badge]][npm-url]
-
-[![Dependencies][david-badge]][david-url]
-
-[![Dev dependencies][david-dev-badge]][david-url]
+[![npm version](https://badge.fury.io/js/%40enspire%2Feslint-config-enspire.svg)](https://www.npmjs.com/package/@enspire/eslint-config-enspire)
+[![Travis](https://img.shields.io/travis/envistaInteractive/eslint-config-enspire.svg)](https://travis-ci.org/envistaInteractive/eslint-config-enspire)
+[![dependencies Status](https://david-dm.org/envistaInteractive/eslint-config-enspire/status.svg)](https://david-dm.org/envistaInteractive/eslint-config-enspire)
+[![devDependencies Status](https://david-dm.org/envistaInteractive/eslint-config-enspire/dev-status.svg)](https://david-dm.org/envistaInteractive/eslint-config-enspire?type=dev)
 
 [![npm package](https://nodei.co/npm/eslint-config-enspire.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/eslint-config-enspire/)
 
