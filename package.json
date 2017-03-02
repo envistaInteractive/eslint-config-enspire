@@ -25,6 +25,9 @@
         "json": "^9.0.4",
         "pre-commit": "^1.2.2"
     },
+    "engines": {
+        "node": ">=6.9.1"
+    },
     "homepage": "https://github.com/envistaInteractive/eslint-config-enspire",
     "keywords": [
         "commerce",
@@ -44,6 +47,7 @@
         "cat": "cat package.json | json -4 | tee package.json > /dev/null",
         "commit": "git-cz",
         "fix": "fixpack && npm run cat",
-        "test": "eslint --debug configs"
+        "test": "eslint --debug configs tests",
+        "validate": "npm run fix && npm run test"
     }
 }
