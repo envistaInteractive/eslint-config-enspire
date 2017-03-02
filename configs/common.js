@@ -62,6 +62,8 @@ module.exports = {
         'no-implicit-coercion': 'error',
         'no-implicit-globals': 'error',
         'no-implied-eval': 'error',
+        // @TODO: Check need for next rule
+        // needs to allow `const self = this;`
         'no-invalid-this': 'error',
         'no-iterator': 'error',
         'no-lone-blocks': 'error',
@@ -151,7 +153,10 @@ module.exports = {
             'error',
             'self'
         ],
-        'eol-last': 'error',
+        'eol-last': [
+            'error',
+            'always'
+        ],
 
         // Non-ASCII characters are not allowed in identifiers for variables.
         'id-match': [
