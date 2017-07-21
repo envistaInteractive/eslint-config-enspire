@@ -27,7 +27,7 @@ const executeOnText = (text) => engine.executeOnText(text).results;
 describe('Dot-notation Validations', () => {
 
     const message1 = 'is better written in dot notation';
-    const message2 = 'default is a syntax error';
+    const message2 = 'is a syntax error';
 
     it('it should validate better written', () => {
         let text = 'b = a[\'a\'];';
