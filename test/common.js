@@ -11,15 +11,15 @@ const util = require('util'); // optional use
 const engine = new CLIEngine({
     envs: ['node', 'mocha'],
     useEslintrc: false,
-    // rules: common.rules -> Optional use
-    rules: {
+    rules: common.rules
+    /*rules: { -> Optional use
         'dot-notation': [
             'error',
             {
                 allowKeywords: true
             }
         ]
-    }
+    }*/
 });
 
 const executeOnText = (text) => engine.executeOnText(text).results;
