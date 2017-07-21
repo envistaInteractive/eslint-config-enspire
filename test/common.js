@@ -39,12 +39,10 @@ describe('Dot-notation Validations', () => {
     });
     it('it should not validate default function', () => {
         let text = 'Joi.string().default(\'defValue\');';
-        // example of big log
         expect(JSON.stringify(executeOnText(text))).to.not.include(message2);
     });
     it('it should not validate try catch', () => {
         let text = 'try{}catch(e){}';
-        // example of big log
         expect(JSON.stringify(executeOnText(text))).to.not.include(message2);
     });
 });
