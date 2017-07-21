@@ -44,7 +44,10 @@ module.exports = {
             'property'
         ],
         'dot-notation': [
-            'error'
+            'error',
+            {
+                allowKeywords: true
+            }
         ],
         eqeqeq: 'error',
         'no-extend-native': 'error',
