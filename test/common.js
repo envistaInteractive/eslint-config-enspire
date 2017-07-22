@@ -5,48 +5,42 @@ const chai = require('chai');
 const expect = chai.expect;
 const chaiString = require('chai-string');
 chai.use(chaiString);
-const common = require('../configs/common'); // optional use
+const common = require('../configs/common');
 const util = require('util'); // optional use
 
 const engine = new CLIEngine({
     envs: ['node', 'mocha'],
     useEslintrc: false,
     rules: common.rules
-    /*rules: { -> Optional use
-        'dot-notation': [
-            'error',
-            {
-                allowKeywords: true
-            }
-        ]
-    }*/
 });
 
-const executeOnText = (text) => engine.executeOnText(text).results;
+const executeOnText = (text) => JSON.stringify(engine.executeOnText(text).results);
+const betterDotNotation = 'is better written in dot notation';
+const sintaxError = 'is a syntax error';
 
 describe('Dot-notation Validations', () => {
 
-    const message1 = 'is better written in dot notation';
-    const message2 = 'is a syntax error';
-
-    it('it should validate better written', () => {
+    it('should raise error when dot-notation is not used', (done) => {
         let text = 'b = a[\'a\'];';
-        expect(JSON.stringify(executeOnText(text))).to.include(message1);
+        expect(executeOnText(text)).to.include(betterDotNotation);
+        return done();
     });
-    it('it should not validate better written', () => {
+    it('should not raise error when dot-notation is used', (done) => {
         let text = 'b = a.a;';
-        expect(JSON.stringify(executeOnText(text))).to.not.include(message1);
+        expect(executeOnText(text)).to.not.include(betterDotNotation);
+        return done();
     });
-    it('it should not validate default function', () => {
+    it('should not raise error when keyword is used', (done) => {
         let text = 'Joi.string().default(\'defValue\');';
-        expect(JSON.stringify(executeOnText(text))).to.not.include(message2);
+        expect(executeOnText(text)).to.not.include(sintaxError);
+        return done();
     });
-    it('it should not validate try catch', () => {
+    it('should not raise error when try catch is used', (done) => {
         let text = 'try{}catch(e){}';
-        expect(JSON.stringify(executeOnText(text))).to.not.include(message2);
+        expect(executeOnText(text)).to.not.include(sintaxError);
+        return done();
     });
 });
-
 
 
 /**
@@ -54,7 +48,7 @@ describe('Dot-notation Validations', () => {
 here, others validations of common rules. Please group in descriptions by rule
 
 describe('XXXXXXX Validations', () => {
- // its...
+ // it...
 }
 
 
