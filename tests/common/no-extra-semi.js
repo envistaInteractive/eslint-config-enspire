@@ -16,17 +16,19 @@ const engine = new CLIEngine({
 });
 
 const executeOnText = (text) => JSON.stringify(engine.executeOnText(text).results);
-describe('no-console Validations', () => {
-    const errorMessageByEslint = 'Unexpected console statement';
+describe('no-extra-semi Validations', () => {
+    const errorMessageByEslint = 'Unnecessary semicolon';
 
-    it('should raise error when a method of console is used', (done) => {
-        const textToTest = `console.log('a');`;
+    it('should raise an error when an unnecessary semicolon appears', (done) => {
+        const textToTest = `function myFunc() { \
+                                \n\treturn 'sample'; \
+                            \n}; `;
         expect(executeOnText(textToTest)).to.include(errorMessageByEslint);
         return done();
     });
 
-    it('should not raise error when a method of console is not used', (done) => {
-        const textToTest = `methodOfExample('a');`;
+    it('should not raise an error when an unnecessary semicolon doesn\'t appear', (done) => {
+        const textToTest = `var x = 'my var';`;
         expect(executeOnText(textToTest)).to.not.include(errorMessageByEslint);
         return done();
     });
