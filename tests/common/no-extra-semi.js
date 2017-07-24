@@ -22,7 +22,7 @@ describe('no-extra-semi Validations', () => {
     it('should raise an error when an unnecessary semicolon appears', (done) => {
         const textToTest = `function myFunc() { \
                                 \n\treturn 'sample'; \
-                            \n}; `;
+                            \n};`;
         expect(executeOnText(textToTest)).to.include(errorMessageByEslint);
         return done();
     });

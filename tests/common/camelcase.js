@@ -16,7 +16,7 @@ const engine = new CLIEngine({
 });
 
 const executeOnText = (text) => JSON.stringify(engine.executeOnText(text).results);
-describe('no-console Validations', () => {
+describe('camelcase Validations', () => {
     const errorMessageByEslint = 'is not in camel case';
 
     it('should raise error when a variable is not camel case', (done) => {
