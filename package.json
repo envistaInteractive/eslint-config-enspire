@@ -15,7 +15,7 @@
     }
   },
   "dependencies": {
-    "eslint": "4.2.0"
+    "eslint": "^3.16.1"
   },
   "devDependencies": {
     "commitizen": "^2.9.6",
