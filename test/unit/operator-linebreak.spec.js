@@ -15,7 +15,7 @@ describe('operator-linebreak Validations', () => {
                 innerHeight +
                 borderBottom;`;
 
-        global.expect(global.executeOnText(textToTest)).to,not.include(errorMessageByEslint);
+        global.expect(global.executeOnText(textToTest)).to.not.include(errorMessageByEslint);
         return done();
     });
 });
