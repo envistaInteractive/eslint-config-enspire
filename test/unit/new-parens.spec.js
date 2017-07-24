@@ -1,6 +1,6 @@
 'use strict';
 
-describe.only('New Parents Validations', () => {
+describe('New Parents Validations', () => {
 
     const errorMessageByEslint = 'Missing \'()\' invoking a constructor.';
 
