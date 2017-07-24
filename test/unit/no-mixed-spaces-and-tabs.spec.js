@@ -1,6 +1,6 @@
 'use strict';
 
-describe.only('No Mixed spaces and tabs', () => {
+describe('No Mixed spaces and tabs', () => {
 
     const errorMessageByEslint = 'Mixed spaces and tabs';
 
