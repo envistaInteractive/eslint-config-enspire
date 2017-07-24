@@ -15,7 +15,7 @@
     }
   },
   "dependencies": {
-    "eslint": "^3.16.1"
+    "eslint": "4.2.0"
   },
   "devDependencies": {
     "chai": "^4.1.0",
@@ -52,6 +52,7 @@
     "fix": "fixpack && npm run cat",
     "test": "eslint --debug configs tests",
     "validate": "npm run fix && npm run test",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "mocha-common":  "mocha tests/common"
   }
 }
