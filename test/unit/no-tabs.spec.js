@@ -1,6 +1,6 @@
 'use strict';
 
-describe.only('No Tabs space Validations', () => {
+describe('No Tabs space Validations', () => {
 
     const errorMessageByEslint = 'Unexpected tab character.';
 
