@@ -1,6 +1,6 @@
 'use strict';
 
-describe('No Mixed spaces and tabs', () => {
+describe('No Mixed spaces and tabs Validations', () => {
 
     const errorMessageByEslint = 'Mixed spaces and tabs';
 

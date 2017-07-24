@@ -1,6 +1,6 @@
 'use strict';
 
-describe('No Spaced func', () => {
+describe('No Spaced func Validations', () => {
 
     const errorMessageByEslint = 'Unexpected space between function name and paren.';
 
