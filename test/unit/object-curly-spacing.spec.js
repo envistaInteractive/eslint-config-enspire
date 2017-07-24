@@ -1,6 +1,6 @@
 'use strict';
 
-describe.only('No object curly spacing Validations', () => {
+describe('No object curly spacing Validations', () => {
 
     const errorMessageByEslint = 'object-curly-spacing';
 
