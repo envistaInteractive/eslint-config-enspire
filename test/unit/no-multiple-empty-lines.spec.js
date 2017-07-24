@@ -1,6 +1,6 @@
 'use strict';
 
-describe('No Mixed spaces and tabs', () => {
+describe('No multiple empty lines Validations', () => {
 
     const errorMessageByEslint = 'Too many blank lines at the beginning of file. Max of 1 allowed.';
 
