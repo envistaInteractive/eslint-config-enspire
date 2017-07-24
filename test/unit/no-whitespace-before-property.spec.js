@@ -1,6 +1,6 @@
 'use strict';
 
-describe.only('No whitespace before property Validations', () => {
+describe('No whitespace before property Validations', () => {
 
     const errorMessageByEslint = 'Unexpected whitespace before property bar.';
 
