@@ -1,15 +1,17 @@
 'use strict';
 
-describe('max-len Validations', () => {
+describe('max-len Validations', () => { 
     const errorMessagesByEslint = {
         forLine: 'exceeds the maximum line length of',
         forComment: 'exceeds the maximum comment line length of'
     };
 
-    it(`(Test for option 'code') should raise an error when a line has more length than maximum line length`, (done) => {
-        const textToTest = `var a = 123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890;`;
+    it('(Test for option \'code\') should raise an error when a line has more length than maximum line length', (done) => {
+
+        const textToTest = 'var a = 123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890;';
         global.expect(global.executeOnText(textToTest)).to.include(errorMessagesByEslint.forLine);
         return done();
+
     });
 
     it('(Test for option \'code\' ) should not raise an error when a line has less length than maximum line length', (done) => {

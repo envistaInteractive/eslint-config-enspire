@@ -55,6 +55,7 @@
     "test": "eslint --debug configs tests",
     "validate": "npm run fix && npm run test",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "unit-test": "mocha"
+    "unit-test": "mocha",
+    "test:debug": "devtool ./node_modules/mocha/bin/_mocha -qc -- test/**/*.spec.js"
   }
 }
