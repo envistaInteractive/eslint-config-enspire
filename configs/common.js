@@ -34,6 +34,7 @@ module.exports = {
         'valid-typeof': 'error',
         //SANTI
         // http://eslint.org/docs/rules/#best-practices
+        //SANTI
         'array-callback-return': 'error',
         'block-scoped-var': 'error',
         curly: [
@@ -55,6 +56,7 @@ module.exports = {
         'no-alert': 'error',
         'no-caller': 'error',
         'no-case-declarations': 'error',
+        //SANTI
         'no-eq-null': 'error',
         'no-eval': 'error',
         'no-extra-bind': 'error',
