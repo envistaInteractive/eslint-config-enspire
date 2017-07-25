@@ -20,9 +20,7 @@ describe('no-extra-bind Validations', () => {
 
         const textToTest = `try {
                                 function () {
-                                    var boundGetName = () => {
-                                        return "ESLint";
-                                    }.bind(this);
+                                    var someFunction = (() => {}).bind('something');
                                 }
                             }catch(e){}`;
         let result = global.executeOnText(textToTest);
