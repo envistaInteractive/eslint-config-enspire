@@ -107,7 +107,6 @@ module.exports = {
             'error',
             'safe'
         ],
-        //CRISTIAN//
         // http://eslint.org/docs/rules/#variables
         'no-delete-var': 'error',
         'no-undef': 'error',
