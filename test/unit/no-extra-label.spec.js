@@ -2,7 +2,7 @@
 
 describe('no-extra-label Validations', () => {
 
-    const errorMessageByEslint = 'This label \A\' is unnecessary.';
+    const errorMessageByEslint = 'This label \'A\' is unnecessary.';
     it('should raise an error because has extra label', (done) => {
 
         const textToTest = `try {
