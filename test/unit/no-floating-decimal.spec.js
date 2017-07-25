@@ -12,7 +12,7 @@ describe('no-floating-decimal Validations', () => {
 
     });
 
-    it('should not raise an error because Floating Decimals', (done) => {
+    it('should not raise an error because not have Floating Decimals', (done) => {
 
         const textToTest = 'var num = 0.5;';
         let result = global.executeOnText(textToTest);
