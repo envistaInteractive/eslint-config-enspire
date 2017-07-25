@@ -1,0 +1,9 @@
+--timeout 10000
+--recursive
+--debug
+--reporter spec
+--compilers js:babel-register
+--bail
+--ui bdd
+--require babel-polyfill test/support/
+test/**/*.spec.js

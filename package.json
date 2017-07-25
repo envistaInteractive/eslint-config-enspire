@@ -15,9 +15,10 @@
     }
   },
   "dependencies": {
-    "eslint": "^3.16.1"
+    "eslint": "4.2.0"
   },
   "devDependencies": {
+    "babel-register": "^6.24.1",
     "chai": "^4.1.0",
     "chai-string": "^1.4.0",
     "commitizen": "^2.9.6",
@@ -25,6 +26,7 @@
     "fixpack": "^2.3.1",
     "ghooks": "^2.0.0",
     "json": "^9.0.4",
+    "mocha": "^3.4.2",
     "pre-commit": "^1.2.2",
     "semantic-release": "^6.3.2"
   },
@@ -52,6 +54,8 @@
     "fix": "fixpack && npm run cat",
     "test": "eslint --debug configs tests",
     "validate": "npm run fix && npm run test",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "unit-test": "mocha",
+    "test:debug": "devtool ./node_modules/mocha/bin/_mocha -qc -- test/**/*.spec.js"
   }
 }
