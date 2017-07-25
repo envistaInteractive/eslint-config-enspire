@@ -2,23 +2,24 @@
 
 describe('no-iterator Validations', () => {
 
-    /*const errorMessageByEslint = 'xxxxx';
-    it('should raise an error because have xxxxx', (done) => {
+    const errorMessageByEslint = 'Reserved name \'__iterator__\'';
+    it('should raise an error because reserved name __iterator__ is used', (done) => {
 
-        const textToTest = 'xxx';
+        const textToTest = 'var foo; foo.__iterator__ = function () {};';
         let result = global.executeOnText(textToTest);
         global.expect(result).to.include(errorMessageByEslint);
         return done();
 
     });
 
-    it('should not raise an error because not have xxxxxx', (done) => {
+    it('should not raise an error because reserved name __iterator__ is not used', (done) => {
 
-        const textToTest = 'xxx';
+        const textToTest = 'var foo; var __iterator__ = foo;';
         let result = global.executeOnText(textToTest);
         global.expect(result).to.not.include(errorMessageByEslint);
         return done();
 
-    });*/
+    });
 
 });
+
