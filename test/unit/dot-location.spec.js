@@ -9,8 +9,8 @@ describe('dot-location Validations', () => {
 
     it('should raise an error when a dot is not in the same line of the property', (done) => {
 
-        const textToTest = `var name = user.\n
-                                \tname;`;
+        const textToTest = `var name = user.
+                                name;`;
         global.expect(global.executeOnText(textToTest)).to.include(errorMessagesByEslint.asProperty);
         return done();
 
@@ -18,8 +18,8 @@ describe('dot-location Validations', () => {
 
     it('should not raise an error when a dot is in the same line of the property', (done) => {
 
-        const textToTest = `var name = user\n
-                                \t.name;`;
+        const textToTest = `var name = user
+                                .name;`;
         global.expect(global.executeOnText(textToTest)).to.not.include(errorMessagesByEslint.asProperty);
         return done();
 

@@ -9,10 +9,10 @@ describe('curly Validations', () => {
 
     it('should raise an error when a block statement is not wrapped by curly braces', (done) => {
 
-        const textToTest = `if (myNum === 100)\n
-                                \tstrNum = 'one hundred';\n
-                            else\n
-                                \tstrNum = 'zero';`;
+        const textToTest = `if (myNum === 100)
+                                strNum = 'one hundred';
+                            else
+                                strNum = 'zero';`;
         global.expect(global.executeOnText(textToTest)).to.include(errorMessagesByEslint.expected);
         return done();
 
@@ -20,14 +20,14 @@ describe('curly Validations', () => {
 
     it('should not raise an error when a block statement is wrapped by curly braces', (done) => {
 
-        const textToTest = `if (myNum === 100) {\n
-                                \n
-                                \tstrNum = 'one hundred';\n
-                                \n
-                            } else {\n
-                                \n
-                                \ttstrNum = 'zero';\n
-                                \n
+        const textToTest = `if (myNum === 100) {
+                                
+                                strNum = 'one hundred';
+                                
+                            } else {
+                                
+                                tstrNum = 'zero';
+                                
                             }`;
         global.expect(global.executeOnText(textToTest)).to.not.include(errorMessagesByEslint.unnecessary);
         return done();

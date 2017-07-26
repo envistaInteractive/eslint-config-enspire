@@ -6,8 +6,8 @@ describe('eqeqeq Validations', () => {
 
     it('should raise an error when === is not used to compare two values', (done) => {
 
-        const textToTest = `if (1 == '1') {\n
-                                \treturn true;\n
+        const textToTest = `if (1 == '1') {
+                                return true;
                             }`;
         global.expect(global.executeOnText(textToTest)).to.include(errorMessageByEslint);
         return done();
@@ -16,8 +16,8 @@ describe('eqeqeq Validations', () => {
 
     it('should not raise an error when === is used to compare two values', (done) => {
 
-        const textToTest = `if (1 === '1') {\n
-                                \treturn true;\n
+        const textToTest = `if (1 === '1') {
+                                return true;
                             }`;
         global.expect(global.executeOnText(textToTest)).to.not.include(errorMessageByEslint);
         return done();
