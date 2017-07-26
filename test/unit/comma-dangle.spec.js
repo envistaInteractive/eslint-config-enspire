@@ -9,9 +9,9 @@ describe('comma-dangle Validations (option: never)', () => {
 
     it('should raise an error when a there is trailing comma', (done) => {
 
-        const textToTest = `var config = {\n
-                                \tkey: 'ABC123456',\n
-                                \tuser: 'root',\n
+        const textToTest = `var config = {
+                                key: 'ABC123456',
+                                user: 'root',
                             }`;
         global.expect(global.executeOnText(textToTest)).to.include(errorMessagesByEslint.unexpected);
         return done();
@@ -20,9 +20,9 @@ describe('comma-dangle Validations (option: never)', () => {
 
     it('should not raise an error when a there isn\'t trailing comma', (done) => {
 
-        const textToTest = `var config = {\n
-                                \tkey: 'ABC123456',\n
-                                \tuser: 'root'\n
+        const textToTest = `var config = {
+                                key: 'ABC123456',
+                                user: 'root'
                             }`;
         global.expect(global.executeOnText(textToTest)).to.not.include(errorMessagesByEslint.unexpected);
         return done();
