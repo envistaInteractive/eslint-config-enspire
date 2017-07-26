@@ -6,8 +6,8 @@ describe('no-negated-in-lhs Validations', () => {
 
     it('should raise an error when negative left operand affects the variable and not the expression', (done) => {
 
-        const textToTest = `if(!id in myObject){\n
-                                \treturn false
+        const textToTest = `if (!id in myObject) {
+                                return false
                             }`;
         global.expect(global.executeOnText(textToTest)).to.include(errorMessageByEslint);
         return done();
@@ -16,8 +16,8 @@ describe('no-negated-in-lhs Validations', () => {
 
     it('should not raise an error when negative left operand affects the expression and not the variable', (done) => {
 
-        const textToTest = `if(!(id in myObject)){\n
-                                \treturn false
+        const textToTest = `if (!(id in myObject)) {
+                                return false
                             }`;
         global.expect(global.executeOnText(textToTest)).to.not.include(errorMessageByEslint);
         return done();

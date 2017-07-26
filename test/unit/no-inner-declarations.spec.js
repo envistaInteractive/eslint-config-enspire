@@ -6,12 +6,12 @@ describe('no-inner-declaration Validations', () => {
 
     it('should raise an error when a function is declared in nested blocks', (done) => {
 
-        const textToTest = `function x () {\n
-                                \tif (true) {\n
-                                    \t\tfunction y () {\n
-                                        \t\t\treturn 'sample';\n
-                                    \t\t}\n
-                                \t}\n
+        const textToTest = `function x () {
+                                if (true) {
+                                    function y () {
+                                        return 'sample';
+                                    }
+                                }
                             }`;
         global.expect(global.executeOnText(textToTest)).to.include(errorMessageByEslint);
         return done();
@@ -20,12 +20,12 @@ describe('no-inner-declaration Validations', () => {
 
     it('should not raise an error when a function is not declared in nested blocks', (done) => {
 
-        const textToTest = `function x () {\n
-                                \tif (true) {\n
-                                    \t\ty = function() {\n
-                                        \t\t\treturn 'sample';\n
-                                    \t\t}\n
-                                \t}\n
+        const textToTest = `function x () {
+                                if (true) {
+                                    y = function() {
+                                        return 'sample';
+                                    }
+                                }
                             }`;
         global.expect(global.executeOnText(textToTest)).to.not.include(errorMessageByEslint);
         return done();
