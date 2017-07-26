@@ -1,6 +1,6 @@
 'use strict';
 
-describe.only('no-implicit-globals Validations', () => {
+describe('no-implicit-globals Validations', () => {
 
     const errorMessageByEslint = 'Implicit global variable, assign as global property instead';
 
