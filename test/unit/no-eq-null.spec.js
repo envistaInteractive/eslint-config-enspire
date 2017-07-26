@@ -6,10 +6,10 @@ describe('no-eq-null Validations', () => {
 
     it('should raise an error when \'null\' is comparated usinf \'===\'', (done) => {
 
-        const textToTest = `if (myVar == null) {\n
-                                \n
-                                \tvar newVar = '';\n
-                                \n
+        const textToTest = `if (myVar == null) {
+                                
+                                var newVar = '';
+                                
                             }`;
         global.expect(global.executeOnText(textToTest)).to.include(errorMessageByEslint);
         return done();
@@ -18,10 +18,10 @@ describe('no-eq-null Validations', () => {
 
     it('should raise an error when \'null\' is comparated using \'===\'', (done) => {
 
-        const textToTest = `if (myVar === null) {\n
-                                \n
-                                \tvar newVar = '';\n
-                                \n
+        const textToTest = `if (myVar === null) {
+                                
+                                var newVar = '';
+                                
                             }`;
         global.expect(global.executeOnText(textToTest)).to.not.include(errorMessageByEslint);
         return done();

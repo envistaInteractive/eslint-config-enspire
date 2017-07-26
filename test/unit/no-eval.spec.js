@@ -14,20 +14,20 @@ describe('no-eval Validations', () => {
 
     it('should not raise an error when the \'eval\' function is not used', (done) => {
 
-        const textToTest = `class MyClass {\n
-                                \n
-                                \tmyFunction () {\n
-                                    \n
-                                    \t\tthis.eval("var a = 0");\n
-                                    \n
-                                \t}\n
-                                \n
-                                \teval (p) {\n
-                                    \n
-                                    \t\t//code for my 'eval' function\n
-                                    \n
-                                \t}\n
-                                \n
+        const textToTest = `class MyClass {
+                                
+                                myFunction () {
+                                    
+                                    this.eval("var a = 0");
+                                    
+                                }
+                                
+                                eval (p) {
+                                    
+                                    //code for my 'eval' function
+                                    
+                                }
+                                
                             }`;
         global.expect(global.executeOnText(textToTest)).to.not.include(errorMessageByEslint);
         return done();
