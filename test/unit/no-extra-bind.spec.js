@@ -16,17 +16,4 @@ describe('no-extra-bind Validations', () => {
 
     });
 
-    it('should not raise an error because not has bind extras', (done) => {
-
-        const textToTest = `try {
-                                function () {
-                                    var someFunction = (() => {}).bind('something');
-                                }
-                            }catch(e){}`;
-        let result = global.executeOnText(textToTest);
-        global.expect(result).to.not.include(errorMessageByEslint);
-        return done();
-
-    });
-
 });
