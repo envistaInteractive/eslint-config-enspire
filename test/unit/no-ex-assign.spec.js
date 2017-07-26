@@ -6,10 +6,10 @@ describe('no-ex-assign Validations', () => {
 
     it('should raise an error when the error parameter of the catch is reassigned', (done) => {
 
-        const textToTest = `try {\n
-                                \tsum(1, 2);\n
-                            } catch (error) {\n
-                                \terror = 'is no a number';\n
+        const textToTest = `try {
+                                sum(1, 2);
+                            } catch (error) {
+                                error = 'is no a number';
                             }`;
         global.expect(global.executeOnText(textToTest)).to.include(errorMessageByEslint);
         return done();
@@ -18,10 +18,10 @@ describe('no-ex-assign Validations', () => {
 
     it('should not raise an error when the error parameter of the catch is not reassigned', (done) => {
 
-        const textToTest = `try {\n
-                                \tsum(1, 2);\n
-                            } catch (error) {\n
-                                \treturn;\n
+        const textToTest = `try {
+                                sum(1, 2);
+                            } catch (error) {
+                                return;
                             }`;
         global.expect(global.executeOnText(textToTest)).to.not.include(errorMessageByEslint);
         return done();
