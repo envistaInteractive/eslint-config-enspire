@@ -6,13 +6,13 @@ describe('no-duplicate-case Validations', () => {
 
     it('should raise an error when a case clause is duplicated in a switch statement', (done) => {
 
-        const textToTest = `switch (auth.method) {\n
-                                \tcase 'basic':\n
-                                \t\tbreak;\n
-                                \tcase 'jwt':\n
-                                \t\tbreak;\n
-                                \tcase 'jwt':\n
-                                \t\tbreak;\n
+        const textToTest = `switch (auth.method) {
+                                case 'basic':
+                                    break;
+                                case 'jwt':
+                                    break;
+                                case 'jwt':
+                                    break;
                             }`;
         global.expect(global.executeOnText(textToTest)).to.include(errorMessageByEslint);
         return done();
@@ -21,11 +21,11 @@ describe('no-duplicate-case Validations', () => {
 
     it('should not raise an error when there aren\'t case duplicated clauses in a switch statement', (done) => {
 
-        const textToTest = `switch (auth.method) {\n
-                                \tcase 'basic':\n
-                                \t\tbreak;\n
-                                \tcase 'jwt':\n
-                                \t\tbreak;\n
+        const textToTest = `switch (auth.method) {
+                                case 'basic':
+                                    break;
+                                case 'jwt':
+                                    break;
                             }`;
         global.expect(global.executeOnText(textToTest)).to.not.include(errorMessageByEslint);
         return done();
