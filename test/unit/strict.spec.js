@@ -3,7 +3,7 @@
 describe('strict Validations', () => {
 
     const errorMessageByEslint = 'Use the global form of \'use strict\'';
-    it('should raise an error because have xxxx', (done) => {
+    it('should raise an error because not have strict', (done) => {
 
         const textToTest = 'function foo() {}';
         let result = global.executeOnText(textToTest);
@@ -12,7 +12,7 @@ describe('strict Validations', () => {
 
     });
 
-    it('should not raise an error because not have xxxx', (done) => {
+    it('should not raise an error because have strict', (done) => {
 
         const textToTest = `'use strict';
                             function foo() {}`;
