@@ -1,6 +1,6 @@
 'use strict';
 
-describe.only('no-invalid-this Validations', () => {
+describe('no-invalid-this Validations', () => {
 
     const errorMessageByEslint = 'Unexpected \'this\'.';
     it('should raise an error because have invalid this', (done) => {
