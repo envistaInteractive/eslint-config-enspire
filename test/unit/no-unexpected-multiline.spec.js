@@ -11,7 +11,7 @@ describe('no-unexpected-multiline Validations', () => {
 
     it('Should raise an error when a statement hasn\'t been closed properly', (done) => {
 
-        const textToTest = `var myVar = anotherVar\n
+        const textToTest = `var myVar = anotherVar
                             (1).myFunction();`;
         global.expect(global.executeOnText(textToTest)).to.include(errorMessagesByEslint.function);
         return done();
@@ -20,7 +20,7 @@ describe('no-unexpected-multiline Validations', () => {
 
     it('Should not raise an error when a statement has been closed properly', (done) => {
 
-        const textToTest = `var myVar = anotherVar;\n
+        const textToTest = `var myVar = anotherVar;
                             (1).myFunction();`;
         global.expect(global.executeOnText(textToTest)).to.not.include(errorMessagesByEslint.function);
         return done();

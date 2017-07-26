@@ -6,9 +6,9 @@ describe('no-unreachable Validations', () => {
 
     it('Should raise an error when a statement can\'t be reachable in a function', (done) => {
 
-        const textToTest = `var x = function() {\n
-                                \treturn 'sample';\n
-                                \tvar num = 1;\n
+        const textToTest = `var x = function() {
+                                return 'sample';
+                                var num = 1;
                             }`;
         global.expect(global.executeOnText(textToTest)).to.include(errorMessageByEslint);
         return done();
@@ -17,9 +17,9 @@ describe('no-unreachable Validations', () => {
 
     it('Should not raise an error when a statement can be reachable in a function', (done) => {
 
-        const textToTest = `var x = function() {\n
-                                \tvar num = 1;\n
-                                \treturn num;\n
+        const textToTest = `var x = function() {
+                                var num = 1;
+                                return num;
                             }`;
         global.expect(global.executeOnText(textToTest)).to.not.include(errorMessageByEslint);
         return done();
