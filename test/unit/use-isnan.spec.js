@@ -6,8 +6,8 @@ describe('use-isnan Validations', () => {
 
     it('should raise an error when NaN is used to checking if a value is a number', (done) => {
 
-        const textToTest = `if (NaN == 'text') {\n
-                                \treturn true;\n
+        const textToTest = `if (NaN == 'text') {
+                                return true;
                             }`;
         global.expect(global.executeOnText(textToTest)).to.include(errorMessageByEslint);
         return done();
@@ -16,8 +16,8 @@ describe('use-isnan Validations', () => {
 
     it('should not raise an error when isNaN function is used to checking if a value is a number', (done) => {
 
-        const textToTest = `if (isNaN('text')) {\n
-                                \treturn true;\n
+        const textToTest = `if (isNaN('text')) {
+                                return true;
                             }`;
         global.expect(global.executeOnText(textToTest)).to.not.include(errorMessageByEslint);
         return done();
