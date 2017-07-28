@@ -3,7 +3,6 @@
 module.exports = {
     rules: {
         // http://eslint.org/docs/rules/#possible-errors
-        //SANTI
         'comma-dangle': [
             'error',
             'never'
@@ -32,9 +31,7 @@ module.exports = {
         'no-unsafe-finally': 'error',
         'use-isnan': 'error',
         'valid-typeof': 'error',
-        //SANTI
         // http://eslint.org/docs/rules/#best-practices
-        //SANTI
         'array-callback-return': 'error',
         'block-scoped-var': 'error',
         curly: [
@@ -56,7 +53,6 @@ module.exports = {
         'no-alert': 'error',
         'no-caller': 'error',
         'no-case-declarations': 'error',
-        //SANTI
         'no-eq-null': 'error',
         'no-eval': 'error',
         'no-extra-bind': 'error',
@@ -159,7 +155,6 @@ module.exports = {
             'error',
             'always'
         ],
-
         // Non-ASCII characters are not allowed in identifiers for variables.
         'id-match': [
             'error',
@@ -206,7 +201,6 @@ module.exports = {
                 capIsNew: false
             }
         ],
-        //CRISTIAN
         'new-parens': 'error',
         'no-mixed-spaces-and-tabs': 'error',
         'no-multiple-empty-lines': [
@@ -237,8 +231,6 @@ module.exports = {
             'error',
             'always'
         ],
-        //CRISTIAN
-        //STEVENSON
         'operator-linebreak': [
             'error',
             'after'
@@ -280,7 +272,6 @@ module.exports = {
             }
         ],
         'unicode-bom': 'error'
-        //STEVENSON
     }
 };
 
