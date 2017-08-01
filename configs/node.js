@@ -32,12 +32,6 @@ module.exports = {
         'no-new-require': 'error',
         'no-path-concat': 'error'
         /* @TODO: bring up for discussion
-        'no-process-env': 'error'
-        'no-restricted-modules': [
-            'error',
-            paths: [],
-            patterns: []
-        ]
         */
     }
     /*
@@ -57,4 +51,3 @@ module.exports = {
     }
     */
 };
-
