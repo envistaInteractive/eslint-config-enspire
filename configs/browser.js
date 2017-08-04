@@ -1,13 +1,32 @@
 'use strict';
 
 module.exports = {
-    env: {
-        protractor: true,
-        browser: true,
-        jquery: true
+    'env': {
+        'browser': true,
+        'jquery': true
     },
-    globals: {
-        angular: true
+    'extends': 'eslint:recommended',
+    'rules': {
+        'indent': [
+            'error',
+            4,
+            {'SwitchCase': 1}
+        ],
+        'linebreak-style': [
+            'error',
+            'unix'
+        ],
+        'quotes': [
+            'warn',
+            'single'
+        ],
+        'semi': [
+            'error',
+            'always'
+        ],
+        'space-before-blocks': [
+            'warn',
+            'always'
+        ]
     }
 };
-
