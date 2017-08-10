@@ -3,7 +3,7 @@
 [![dependencies Status](https://david-dm.org/envistaInteractive/eslint-config-enspire/status.svg)](https://david-dm.org/envistaInteractive/eslint-config-enspire)
 [![devDependencies Status](https://david-dm.org/envistaInteractive/eslint-config-enspire/dev-status.svg)](https://david-dm.org/envistaInteractive/eslint-config-enspire?type=dev)
 
-[![npm package](https://nodei.co/npm/eslint-config-enspire.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/eslint-config-enspire/)
+[![npm package](https://nodei.co/npm/@enspire/eslint-config-enspire.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/@enspire/eslint-config-enspire/)
 
 # eslint-config-enspire
 
@@ -13,10 +13,10 @@ ESLint configuration for JavaScript projects at Enspire Commerce
 * npm install --save-dev @enspire/eslint-config-enspire
 
 ## Usage
-* Add to your `.eslintrc.js`
-```js
+* Add to your `.eslintrc.json`
+```json
 {
-    extends: '@enspire/enspire'
+    "extends": "@enspire/enspire"
 }
 ```
 
