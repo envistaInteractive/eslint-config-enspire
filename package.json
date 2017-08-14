@@ -18,6 +18,8 @@
     "eslint": "^3.16.1"
   },
   "devDependencies": {
+    "chai": "^4.1.0",
+    "chai-string": "^1.4.0",
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.0.0",
     "fixpack": "^2.3.1",
