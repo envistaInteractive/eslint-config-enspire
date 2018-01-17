@@ -275,7 +275,8 @@ module.exports = {
             }
         ],
         'unicode-bom': 'error',
-        'require-await': 'error'
+        'require-await': 'error',
+        'rest-spread-spacing': ['error', 'never']
     }
 };
 
