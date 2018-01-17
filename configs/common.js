@@ -276,7 +276,10 @@ module.exports = {
         ],
         'unicode-bom': 'error',
         'require-await': 'error',
-        'rest-spread-spacing': ['error', 'never']
+        'rest-spread-spacing': [
+            'error',
+            'never'
+        ]
     }
 };
 
