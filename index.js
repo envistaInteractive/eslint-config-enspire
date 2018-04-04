@@ -5,7 +5,12 @@ module.exports = {
         es6: true
     },
     parserOptions: {
-        ecmaVersion: 2017
+        ecmaVersion: 2018,
+        ecmaFeatures: {
+            // @TODO: Update this setting once becomes mainstream
+            // https://eslint.org/docs/user-guide/configuring#deprecated
+            experimentalObjectRestSpread: true
+        }
     },
     extends: [
         './configs/common.js',
