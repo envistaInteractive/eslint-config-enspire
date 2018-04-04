@@ -1,57 +1,58 @@
 {
-  "name": "@enspire/eslint-config-enspire",
-  "description": "ESLint configuration used at Enspire Commerce",
-  "version": "0.0.0-development",
-  "author": "SEE AUTHORS IN AUTHORS.md",
-  "bugs": {
-    "url": "https://github.com/envistaInteractive/eslint-config-enspire/issues"
-  },
-  "config": {
-    "ghooks": {
-      "pre-commit": "npm run validate"
+    "name": "@enspire/eslint-config-enspire",
+    "description": "ESLint configuration used at Enspire Commerce",
+    "version": "0.0.0-development",
+    "author": "SEE AUTHORS IN AUTHORS.md",
+    "bugs": {
+        "url": "https://github.com/envistaInteractive/eslint-config-enspire/issues"
     },
-    "commitizen": {
-      "path": "cz-conventional-changelog"
+    "config": {
+        "ghooks": {
+            "pre-commit": "npm run validate"
+        },
+        "commitizen": {
+            "path": "cz-conventional-changelog"
+        }
+    },
+    "dependencies": {
+        "eslint": "^4.19.1"
+    },
+    "devDependencies": {
+        "chai": "^4.1.0",
+        "chai-string": "^1.4.0",
+        "commitizen": "^2.9.6",
+        "cz-conventional-changelog": "^2.0.0",
+        "fixpack": "^2.3.1",
+        "ghooks": "^2.0.0",
+        "json": "^9.0.4",
+        "pre-commit": "^1.2.2",
+        "semantic-release": "^6.3.2"
+    },
+    "engines": {
+        "node": ">=6.9.1"
+    },
+    "homepage": "https://github.com/envistaInteractive/eslint-config-enspire",
+    "keywords": [
+        "commerce",
+        "enspire",
+        "envista",
+        "eslint",
+        "eslintconfig",
+        "standards",
+        "styleguide"
+    ],
+    "license": "MIT",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/envistaInteractive/eslint-config-enspire"
+    },
+    "scripts": {
+        "cat": "cat package.json | json -4 | tee package.json > /dev/null",
+        "commit": "git-cz",
+        "fix": "fixpack && npm run cat",
+        "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+        "test": "eslint --debug configs tests",
+        "validate": "npm run fix && npm run test"
     }
-  },
-  "dependencies": {
-    "eslint": "^3.16.1"
-  },
-  "devDependencies": {
-    "chai": "^4.1.0",
-    "chai-string": "^1.4.0",
-    "commitizen": "^2.9.6",
-    "cz-conventional-changelog": "^2.0.0",
-    "fixpack": "^2.3.1",
-    "ghooks": "^2.0.0",
-    "json": "^9.0.4",
-    "pre-commit": "^1.2.2",
-    "semantic-release": "^6.3.2"
-  },
-  "engines": {
-    "node": ">=6.9.1"
-  },
-  "homepage": "https://github.com/envistaInteractive/eslint-config-enspire",
-  "keywords": [
-    "commerce",
-    "enspire",
-    "eslint",
-    "eslintconfig",
-    "standards",
-    "styleguide"
-  ],
-  "license": "MIT",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/envistaInteractive/eslint-config-enspire"
-  },
-  "scripts": {
-    "cat": "cat package.json | json -4 | tee package.json > /dev/null",
-    "commit": "git-cz",
-    "fix": "fixpack && npm run cat",
-    "test": "eslint --debug configs tests",
-    "validate": "npm run fix && npm run test",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
-  }
 }
