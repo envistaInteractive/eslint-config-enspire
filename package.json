@@ -1,7 +1,7 @@
 {
     "name": "@enspire/eslint-config-enspire",
     "description": "ESLint configuration used at Enspire Commerce",
-    "version": "0.0.0-development",
+    "version": "1.1.2",
     "author": "SEE AUTHORS IN AUTHORS.md",
     "bugs": {
         "url": "https://github.com/envistaInteractive/eslint-config-enspire/issues"
