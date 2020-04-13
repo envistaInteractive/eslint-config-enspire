@@ -133,7 +133,16 @@ module.exports = {
             'error',
             '1tbs'
         ],
-        camelcase: 'error',
+        camelcase: [
+            'error',
+            {
+                allow: [
+                    'table_name',
+                    'return_object'
+                ],
+                properties: 'never'
+            }
+        ],
         'comma-spacing': [
             'error',
             {
@@ -201,7 +210,9 @@ module.exports = {
         'new-cap': [
             'error',
             {
-                capIsNew: false
+                capIsNew: false,
+                newIsCap: false,
+                properties: false
             }
         ],
         'new-parens': 'error',
