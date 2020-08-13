@@ -22,21 +22,21 @@ describe('Dot-notation Validations', () => {
 
     it('should raise error when dot-notation is not used', (done) => {
 
-        let text = 'b = a[\'a\'];';
+        const text = 'b = a[\'a\'];';
         expect(executeOnText(text)).to.include(betterDotNotation);
         return done();
 
     });
     it('should not raise error when dot-notation is used', (done) => {
 
-        let text = 'b = a.a;';
+        const text = 'b = a.a;';
         expect(executeOnText(text)).to.not.include(betterDotNotation);
         return done();
 
     });
     it('should not raise error when keyword is used', (done) => {
 
-        let text = 'Joi.string().default(\'defValue\');';
+        const text = 'Joi.string().default(\'defValue\');';
         expect(executeOnText(text)).to.not.include(sintaxError);
         return done();
 
@@ -44,7 +44,7 @@ describe('Dot-notation Validations', () => {
 
     it('should not raise error when try catch is used', (done) => {
 
-        let text = 'try{}catch(e){}';
+        const text = 'try{}catch(e){}';
         expect(executeOnText(text)).to.not.include(sintaxError);
         return done();
 
