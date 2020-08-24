@@ -4,7 +4,8 @@ module.exports = {
     env: {
         node: true,
         mocha: true,
-        jasmine: true
+        jasmine: true,
+        es6: true
     },
     rules: {
         'global-require': 'error',
@@ -30,7 +31,8 @@ module.exports = {
             }
         ],
         'no-new-require': 'error',
-        'no-path-concat': 'error'
+        'no-path-concat': 'error',
+        'prefer-const': 'error'
         /* @TODO: bring up for discussion
         'no-process-env': 'error'
         'no-restricted-modules': [
@@ -39,8 +41,8 @@ module.exports = {
             patterns: []
         ]
         */
-    }
-    /*
+    },
+    // testing helpers
     globals: {
         define: true,
         require: true,
@@ -55,6 +57,5 @@ module.exports = {
         inject: true,
         expect: true
     }
-    */
 };
 
