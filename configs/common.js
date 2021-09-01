@@ -49,6 +49,7 @@ module.exports = {
                 allowKeywords: true
             }
         ],
+        'arrow-spacing': 'error',
         eqeqeq: 'error',
         'no-extend-native': 'error',
         'no-alert': 'error',
