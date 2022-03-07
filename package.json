@@ -15,16 +15,16 @@
         }
     },
     "dependencies": {
-        "eslint": "^6.8.0"
+        "eslint": "^8.10.0"
     },
     "devDependencies": {
-        "chai": "^4.1.0",
-        "chai-string": "^1.4.0",
-        "commitizen": "^2.9.6",
-        "cz-conventional-changelog": "^2.1.0",
-        "fixpack": "^2.3.1",
-        "ghooks": "^2.0.0",
-        "json": "^9.0.4",
+        "chai": "^4.3.6",
+        "chai-string": "^1.5.0",
+        "commitizen": "^4.2.4",
+        "cz-conventional-changelog": "^3.3.0",
+        "fixpack": "^4.0.0",
+        "ghooks": "^2.0.4",
+        "json": "^11.0.0",
         "pre-commit": "^1.2.2"
     },
     "engines": {
